@@ -1,2 +1,11 @@
 #!/bin/sh
-docker run -u 2001:2001 --mount='type=bind,src=/home/vital/projects/opencog,dst=/home/vital/projects' --mount='type=bind,src=/home/vital/.stack,dst=/home/vital/.stack' --network='container:nervous_dijkstra' -ti opencog  bash
+
+SOURCE_DIR=${HOME}/temp/agi
+DOCKER_HOME=/home/opencog
+POSTGRES_CONTAINER="priceless_elion"
+
+docker run -u `id -u`:`id -g` \
+    --mount="type=bind,src=${SOURCE_DIR},dst=${DOCKER_HOME}/projects" \
+    --mount="type=bind,src=${HOME}/.stack,dst=${DOCKER_HOME}/.stack" \
+    --network="container:${POSTGRES_CONTAINER}" \
+    -ti opencog  bash
