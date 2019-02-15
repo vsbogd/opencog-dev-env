@@ -2,7 +2,7 @@
 
 SOURCE_DIR=${HOME}/temp/agi
 DOCKER_HOME=/home/opencog
-POSTGRES_CONTAINER="amazing_chaum"
+POSTGRES_CONTAINER="opencog-postgres"
 
 docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
 	-u `id -u`:`id -g` \
