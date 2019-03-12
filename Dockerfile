@@ -2,8 +2,8 @@ FROM opencog/opencog-deps
 
 ARG EXT_UID=2001
 ARG EXT_GID=2001
-ARG USERNAME=opencog
-ARG GROUPNAME=opencog
+ARG USERNAME=vital
+ARG GROUPNAME=vital
 
 ENV PGHOST localhost
 ENV PGUSER opencog_test
@@ -20,5 +20,5 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-COPY --chown=opencog:opencog .bashrc /home/$USERNAME/.bashrc
-COPY --chown=opencog:opencog .gdbinit /home/$USERNAME/.gdbinit
+COPY --chown=vital:vital .bashrc /home/$USERNAME/.bashrc
+COPY --chown=vital:vital .gdbinit /home/$USERNAME/.gdbinit
