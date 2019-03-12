@@ -1,7 +1,7 @@
 #!/bin/sh
 
-SOURCE_DIR=${HOME}/temp/agi
-DOCKER_HOME=/home/opencog
+SOURCE_DIR=${HOME}/projects/opencog
+DOCKER_HOME=/home/vital
 POSTGRES_CONTAINER=opencog-postgres
 
 docker run --name "${POSTGRES_CONTAINER}" --rm --detach opencog/postgres
