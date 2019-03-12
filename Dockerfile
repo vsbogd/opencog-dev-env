@@ -21,3 +21,4 @@ USER $USERNAME
 WORKDIR /home/$USERNAME
 
 COPY --chown=opencog:opencog .bashrc /home/$USERNAME/.bashrc
+COPY --chown=opencog:opencog .gdbinit /home/$USERNAME/.gdbinit
