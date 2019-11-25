@@ -12,4 +12,5 @@ docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
     --mount="type=bind,src=${SOURCE_DIR},dst=${DOCKER_HOME}/projects" \
     --mount="type=bind,src=${HOME}/.stack,dst=${DOCKER_HOME}/.stack" \
     --network="container:${POSTGRES_CONTAINER}" \
+    --mount="type=bind,src=/mnt/fileserver,dst=/mnt/fileserver" \
     -ti opencog  bash
