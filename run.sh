@@ -9,7 +9,7 @@ docker run --name "${POSTGRES_CONTAINER}" --rm --detach opencog/postgres
 docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
 	--name opencog \
 	-u `id -u`:`id -g` \
-    --mount="type=bind,src=${SOURCE_DIR},dst=${DOCKER_HOME}/projects" \
+    --mount="type=bind,src=${SOURCE_DIR},dst=${SOURCE_DIR}" \
     --mount="type=bind,src=${HOME}/.stack,dst=${DOCKER_HOME}/.stack" \
     --network="container:${POSTGRES_CONTAINER}" \
     --mount="type=bind,src=/mnt/fileserver,dst=/mnt/fileserver" \
