@@ -1,4 +1,4 @@
-FROM opencog/opencog-deps
+FROM singularitynet/opencog-deps
 
 ARG EXT_UID=1000
 ARG EXT_GID=1000
