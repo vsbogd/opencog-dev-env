@@ -124,6 +124,6 @@ fi
 set -o vi
 
 # variables
-export OPENCOG="/home/vital/projects"
+export OPENCOG="/home/opencog/projects"
 export MAKEFLAGS=-j4
 export PATH="${HOME}/bin:$PATH"
